@@ -1,0 +1,53 @@
+Digital platform to manage secondary resources (like old household Articles, E-Waste, Clothes, Leftover Food, etc.) . Users will be able to list the items that they dont need and the necessary further steps such as contacting the NGOs for distribution to the needy will be done automatically.
+
+Notes
+
+objects:
+	household and industrial waste
+	leftover food
+	furniture
+	books
+	clothes
+	e-waste
+
+stack:
+	django
+	html, css, js
+	flutter - web app
+
+feature:
+	select ngos according to location of user
+	list marriage halls in the city and automatically ask them
+	list city based recycling units
+	will work on slow internet speed
+	leaderboards
+	social media integration
+
+
+Accepted Items:
+Food
+	description
+	weight (approx.)
+	date made
+
+furniture
+	description
+	material
+	weight
+
+books
+	Topic/Description
+	weight
+	
+clothes
+	material
+	clean
+
+electronics
+	working condition
+		defects
+	description
+	
+Bedding
+	Washed(?)
+	Description
