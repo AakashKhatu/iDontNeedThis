@@ -51,3 +51,6 @@ electronics
 Bedding
 	Washed(?)
 	Description
+
+Garbage
+	(display nearest government waste management facilities)
