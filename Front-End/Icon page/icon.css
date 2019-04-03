@@ -22,16 +22,16 @@ body{
 p{
   margin-top: 10px;
   color:white;
-  font-size: 45px;
+  font-size: 250px;
 }
-.sphere1,.sphere2,.sphere3{
+.sphere1,.sphere2,.sphere3,.sphere4,.sphere5{
   background-color: white;
   border: solid 0 white;
-  margin: -20px 10px 0 10px;
+  margin: -20px 30px 0 30px;
   border-radius: 50%;
-  height: 5px;
+  height: 25px;
   position: relative;
-  width: 5px;
+  width: 25px;
 }
 .sphere1{
   animation-name: bounce1;
@@ -42,55 +42,146 @@ p{
   animation-name: bounce2;
   animation-iteration-count: infinite;
   animation-duration: 3s;
-  animation-delay: 1s;
+  animation-delay: 0.6s;
 }
 .sphere3{
   animation-name: bounce3;
   animation-iteration-count: infinite;
   animation-duration: 3s;
-  animation-delay: 2s;
+  animation-delay: 1.2s;
+}
+.sphere4{
+  animation-name: bounce4;
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
+  animation-delay: 1.8s;
+}
+.sphere5{
+  animation-name: bounce5;
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
+  animation-delay: 2.4s;
 }
 a{
   color: red;
 }
 @keyframes bounce1 {
   0%{
-    background-color: white;
-    top:0px;
+    background-color: red;
+    bottom: 0px;
+  }
+  25%{
+    background-color: yellow;
+    bottom:15px;
   }
   50%{
-    background-color:white;
-    top:-10px;
+    background-color:orange;
+    bottom: 30px;
+  }
+  75%{
+    background-color: green;
+    bottom: 15px;
+    visibility: visible;
   }
   100%{
-    background-color: inherit;
-    top: 0px;
+    background-color: blue;
+    bottom: 0px;
+    visibility: visible;
   }
 }
 @keyframes bounce2 {
   0%{
-    background-color: white;
-    top:0px;
+    background-color: red;
+    bottom: 0px;
+  }
+  25%{
+    background-color: yellow;
+    bottom:15px;
   }
   50%{
-    background-color:white;
-    top:-10px;
+    background-color:orange;
+    bottom: 30px;
+  }
+  75%{
+    background-color: green;
+    bottom: 15px;
+    visibility: visible;
   }
   100%{
-    background-color: inherit;
-    top: 0px;
+    background-color: blue;
+    bottom: 0px;
+    visibility: visible;
   }
-}@keyframes bounce3 {
+}
+@keyframes bounce3 {
   0%{
-    background-color: white;
-    top:0px;
+    background-color: red;
+    bottom: 0px;
+  }
+  25%{
+    background-color: yellow;
+    bottom:15px;
   }
   50%{
-    background-color:white;
-    top:-10px;
+    background-color:orange;
+    bottom: 30px;
+  }
+  75%{
+    background-color: green;
+    bottom: 15px;
+    visibility: visible;
   }
   100%{
-    background-color: inherit;
-    top: 0px;
+    background-color: blue;
+    bottom: 0px;
+    visibility: visible;
+  }
+}
+
+@keyframes bounce4 {
+  0%{
+    background-color: red;
+    bottom: 0px;
+  }
+  25%{
+    background-color: yellow;
+    bottom:15px;
+  }
+  50%{
+    background-color:orange;
+    bottom: 30px;
+  }
+  75%{
+    background-color: green;
+    bottom: 15px;
+    visibility: visible;
+  }
+  100%{
+    background-color: blue;
+    bottom: 0px;
+    visibility: visible;
+  }
+}@keyframes bounce5 {
+  0%{
+    background-color: red;
+    bottom: 0px;
+  }
+  25%{
+    background-color: yellow;
+    bottom:15px;
+  }
+  50%{
+    background-color:orange;
+    bottom: 30px;
+  }
+  75%{
+    background-color: green;
+    bottom: 15px;
+    visibility: visible;
+  }
+  100%{
+    background-color: blue;
+    bottom: 0px;
+    visibility: visible;
   }
 }
