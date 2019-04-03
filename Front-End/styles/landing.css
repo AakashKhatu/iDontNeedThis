@@ -26,6 +26,20 @@ nav {
     height: 10vh;
 }
 
+nav .links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .links p {
+    margin: 0 20px ;
+}
+
+nav .links:hover {
+    cursor: pointer;
+}
+
 .hero {
     height: 90vh;
     display: flex;
@@ -43,7 +57,7 @@ nav {
 }
 
 .hero img {
-    width: 400px;
+    width: 30%;
 }
 
 .button {
@@ -60,4 +74,38 @@ nav {
 
 .button:hover {
     box-shadow: 0 4px 15px 2px #ffffff7a;
+}
+
+@media only screen and (max-width: 1000px) {
+    .hero {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    nav .links {
+        display: none;
+    }
+
+    .hero .title {
+        font-size: 2rem;
+    }
+
+    .hero .subtitle {
+        font-size: 1rem;
+    }
+
+    .title,
+    .subtitle {
+        width: 100% !important;
+        text-align: center;
+    }
+
+    .hero .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 30px 0;
+    }
 }
