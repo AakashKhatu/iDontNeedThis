@@ -1,22 +1,57 @@
 html{
-
+display: flex;
 }
-food{
-
+h1{
+  font-size: 50px;
+  margin-left: 30px;
 }
-books{
-
+main{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
-Furniture{
-
-}
-Electronics{
-
-}
-cloth{
-
-}
-icon{
+img{
+  display: flex;
+  margin:60px 110px 32px 120px;
   height: 100px;
+  align-items: center;
+  justify-content: center;
   width: 100px;
+}
+.flex{
+  border: solid 0 orange;
+  border-radius: 30px;
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+p{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 60px;
+  color: #fff;
+  font-size: 25px;
+}
+#food{
+background: linear-gradient(45deg,#330080,#e0ccff);
+}
+#books{
+  background: linear-gradient(45deg,#ff751a,#fff0e6);
+
+}
+#Furniture{
+background: linear-gradient(45deg,#3396ff,#b3d6ff);
+}
+#Electronics{
+  background: linear-gradient(45deg,#47d147,#d6f5d6);
+}
+#medi{
+background: linear-gradient(45deg,#ffd86c,#ffecb3);
+}
+#cloth{
+background: linear-gradient(45deg,#e600e6,#ff66ff,#ffe6ff);
+}
+#bed{
+  background: linear-gradient(45deg,#ff1a1a,#ffe6e6);
 }
