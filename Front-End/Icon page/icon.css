@@ -1,0 +1,96 @@
+* {
+  font-family: 'Product Sans', sans-serif;
+}
+
+html{
+display: flex;
+flex-direction:column;
+align-items: center;
+background-color: black;
+justify-content: center;
+}
+body{
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: center;
+}
+.loader{
+  display: flex;
+  flex-direction: row;
+}
+p{
+  margin-top: 10px;
+  color:white;
+  font-size: 45px;
+}
+.sphere1,.sphere2,.sphere3{
+  background-color: white;
+  border: solid 0 white;
+  margin: -20px 10px 0 10px;
+  border-radius: 50%;
+  height: 5px;
+  position: relative;
+  width: 5px;
+}
+.sphere1{
+  animation-name: bounce1;
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
+}
+.sphere2{
+  animation-name: bounce2;
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
+  animation-delay: 1s;
+}
+.sphere3{
+  animation-name: bounce3;
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
+  animation-delay: 2s;
+}
+a{
+  color: red;
+}
+@keyframes bounce1 {
+  0%{
+    background-color: white;
+    top:0px;
+  }
+  50%{
+    background-color:white;
+    top:-10px;
+  }
+  100%{
+    background-color: inherit;
+    top: 0px;
+  }
+}
+@keyframes bounce2 {
+  0%{
+    background-color: white;
+    top:0px;
+  }
+  50%{
+    background-color:white;
+    top:-10px;
+  }
+  100%{
+    background-color: inherit;
+    top: 0px;
+  }
+}@keyframes bounce3 {
+  0%{
+    background-color: white;
+    top:0px;
+  }
+  50%{
+    background-color:white;
+    top:-10px;
+  }
+  100%{
+    background-color: inherit;
+    top: 0px;
+  }
+}
