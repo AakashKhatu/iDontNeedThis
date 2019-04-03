@@ -1,3 +1,7 @@
+* {
+  font-family: 'Product Sans', sans-serif;
+}
+
 html{
 display: flex;
 }
