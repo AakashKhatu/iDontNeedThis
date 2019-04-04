@@ -47,13 +47,13 @@
             <form action="." method="post" class="auth-form">
                 {% csrf_token %}
                 <div class="input-field">
-                    <input id="phone" oninput="this.setCustomValidity('')"
+                    <input name="phone" id="phone" oninput="this.setCustomValidity('')"
                         oninvalid="this.setCustomValidity('Please enter a valid phone number.')"
                         pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}" type="tel">
                     <label for="phone">Phone</label>
                 </div>
                 <div class="input-field">
-                    <input id="password" required oninput="this.setCustomValidity('')" minlength="6"
+                    <input name="password" id="password" required oninput="this.setCustomValidity('')" minlength="6"
                         oninvalid="this.setCustomValidity('Password should be 6 characters long.')" type="password">
                     <label for="password">Password</label>
                 </div>
