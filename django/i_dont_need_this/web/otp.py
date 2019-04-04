@@ -13,4 +13,7 @@ def send_otp(number):
     headers = {
         'cache-control': "no-cache"
     }
+    response = requests.request(
+        "GET", url, headers=headers, params=querystring)
+    print(response.text)
     return otp
