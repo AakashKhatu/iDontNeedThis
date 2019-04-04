@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-{% load static %}
 <html lang="en" dir="ltr">
+{% load static %}
 
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="{% static "assets/fonts.css" %}">
+  <script type="text/javascript" src="{% static "js/FrontEnd.js" %}"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="stylesheet" href="{% static "styles/FrontEnd.css" %}" media="screen" type="text/css">
   <link rel="stylesheet" type="text/css" media="screen" href="{% static "styles/login.css" %}">
@@ -19,9 +20,15 @@
   <section class="nav">
     <h1><a>i</a>DontNeedThis</h1><br>
     <div class="links">
-      <p>About Us</p>
+      <a href={% url "about" %}>About Us&nbsp;&nbsp;&nbsp;</a>
+      <a href="{% url "faq" %}">FAQ&nbsp;&nbsp;&nbsp;</a>
+      {% if user.is_authenticated %}
+      <a href="{% url "logout" %}">Logout</a>
+      <a href="{% url "profile" %}">Logged In as: {{ user.username }}</a>
+      {% else %}
       <p onclick="animateOnLogin('.auth-popup-container')">Login</p>
       <p onclick="animateOnLogin('.auth-popup-container')">Sign Up</p>
+      {% endif %}
     </div>
   </section>
   <section class="auth-popup-container">
@@ -53,7 +60,7 @@
     </div>
   </section>
   <main id="main">
-    <div id="food" class="flex">
+    <div id="food" onclick="" class="flex">
       <div class="icon">
         <img src="{% static "icons/pizza-slice-solid.svg" %}" alt="food">
       </div>
@@ -63,7 +70,7 @@
       <div class="icon">
         <img src="{% static "icons/book-solid.svg" %}" alt="">
       </div>
-      <p>Books</p>
+      <p>Stationary</p>
     </div>
     <div id="Furniture" class="flex">
       <div class="icon">
@@ -95,13 +102,23 @@
         <p>Bedding</p>
       </div>
     </div>
-    <div class="flex" id="money">
+    <div class="flex" onclick="Money()" id="money">
       <div class="icon">
         <img src="{% static "icons/credit-card-solid.svg" %}" alt="">
         <p>Money Transfer</p>
       </div>
     </div>
   </main>
+  <section class="popup-container">
+    <div onclick="animateClose('.popup-container')" class="popup-backdrop"></div>
+    <div class="popup">
+      <h1>Dummy</h1>
+      <form action="" class="popup-form">
+
+      </form>
+    </div>
+  </section>
+
 </body>
 
 </html>

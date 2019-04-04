@@ -21,11 +21,11 @@
 
 <body>
     <section class="nav container">
-        <h1>I don't need this</h1>
+        <h1>iDontNeedThis</h1>
         <div class="links">
-            <p>About Us</p>
-            {{ phnum }}
+            <a href={% url "about" %}>About Us&nbsp;&nbsp;&nbsp;</a>
             {% if user.is_authenticated %}
+            <a href="{% url "logout" %}">Logout&nbsp;&nbsp;&nbsp;</a>
             <a href="{% url "profile" %}" style="color: White">Logged In as: {{ user.username }}</a>
             {% else %}
             <p onclick="animateOnLogin('.auth-popup-container')">Login</p>

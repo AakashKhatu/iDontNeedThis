@@ -13,6 +13,14 @@ def logout_view(request):
     return redirect('index')
 
 
+def about_view(request):
+    return render(request, 'web/about.html', {})
+
+
+def faq_view(request):
+    return render(request, 'web/faq.html', {})
+
+
 class index(TemplateView):
     def get(self, request):
         if request.user.is_authenticated:
