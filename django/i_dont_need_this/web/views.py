@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView
-
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth import authenticate
 # Create your views here.
 
 
@@ -16,6 +17,17 @@ class index(TemplateView):
 class dash(TemplateView):
     def get(self, request):
         return render(request, "web/FrontEnd.html", {})
+
+    def post(self, request):
+
+        return render(request, "web/FrontEnd.html", {})
+
+
+class profile(LoginRequiredMixin, TemplateView):
+    login_url = '/'
+
+    def get(self, request):
+        return render(request, "web/profile.html", {})
 
     def post(self, request):
         print(request.POST)
