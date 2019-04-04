@@ -5,10 +5,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="assets/fonts.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="styles/FrontEnd.css" media="screen" type="text/css">
-    <title>iDontNeedThis</title><h1><a>i</a>DontNeedThis</h1><br>
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/login.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="js/landing.js"></script>
+    <title>iDontNeedThis</title>
   </head>
   <body>
+      <section class="nav">
+          <h1><a>i</a>DontNeedThis</h1><br>
+          <div class="links">
+              <p>About Us</p>
+              <p onclick="animateOnLogin('.auth-popup-container')">Login</p>
+              <p onclick="animateOnLogin('.auth-popup-container')">Sign Up</p>
+          </div>
+      </section>
+      <section class="auth-popup-container">
+          <div class="auth-backdrop" onclick="animateClose('.auth-popup-container')"></div>
+          <div class="auth-popup card">
+              <div class="auth-side">
+                  <div>
+                          <h1 style="color: #fff;margin-left: 0px; ">Login</h1>
+                          <p style="font-size: 1rem;">Get access to all your previous donations and incentives.</p>        
+                  </div>
+                  <img src="icons/auth.svg" style="height: auto !important" alt="login"/>
+                  <img src="icons/close.svg" class="close" alt="close" onclick="animateClose('.auth-popup-container')"/>
+              </div>
+              <form action="" class="auth-form">
+                      <div class="input-field">
+                          <input id="phone"
+                          oninput="this.setCustomValidity('')"
+                          oninvalid="this.setCustomValidity('Please enter a valid phone number.')" 
+                          pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}" type="tel">
+                          <label for="phone">Phone</label>
+                      </div>
+                      <div class="input-field">
+                          <input id="password" required
+                          oninput="this.setCustomValidity('')"
+                          minlength="6"
+                          oninvalid="this.setCustomValidity('Password should be 6 characters long.')" type="password">
+                          <label for="password">Password</label>
+                      </div>
+                      <button type="submit" class="button accent fullwidth">Submit</button>
+              </form>
+          </div>
+      </section>
     <main id="main">
       <div id="food" class="flex">
         <div class="icon">

@@ -31,10 +31,41 @@ img{
 }
 .flex{
   border: solid 0 orange;
-  border-radius: 30px;
+  border-radius: 10px;
   margin-right: 30px;
   margin-bottom: 30px;
 }
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+  margin: 40px 0;
+  margin-right: 30px;
+}
+
+.nav .links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav .links p {
+  margin: 0 20px ;
+  color: #000;
+}
+
+.nav .links:hover {
+  cursor: pointer;
+}
+
+.container {
+  max-width: 1368px;
+  width: 80%;
+  margin: 0 auto;
+}
+
 p{
   display: flex;
   align-items: center;
