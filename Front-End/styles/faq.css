@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   font-family: 'Product Sans', sans-serif;
+  font-size: 20px;
 }
 
 html{
@@ -22,7 +23,7 @@ html{
   background: #ff6b6b;
   align-items: center;
   justify-content: flex-start;
-  box-shadow: 0 2px 14px 2px #ff6b6b5b;
+  box-shadow:0 2px 14px 2px #ff6b6b5b;
   margin-bottom:40px
 }
 
@@ -35,4 +36,16 @@ html{
 #bar a {
   width: 29px;
   margin-left: 30px;
+}
+
+.Quest {
+  width: viewport;
+  border: 2px solid rgb(192, 66, 66);
+  padding: 15px;
+  margin-block-start: 5px;
+  border-radius: 5px;
+}
+
+.ans{
+  font-size: 17px;
 }
