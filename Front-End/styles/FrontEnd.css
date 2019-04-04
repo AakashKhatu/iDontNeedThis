@@ -102,3 +102,41 @@ background: linear-gradient(45deg,#cc00cc,#ff66ff,#ffe6ff);
 a{
   color: red;
 }
+@media only screen and (max-width:500px){
+  .links{
+    display: none !important;
+  }
+}
+.button {
+    background: #fff;
+    border: none;
+    display: inline-block;
+    margin-top: 10px;
+    outline: none;
+    text-decoration: none;
+    border-radius: 4px;
+    color: #ff6b6b;
+    padding: 10px 15px;
+    box-shadow: 0 2px 10px 2px #ffffff7a;
+    transition: all 0.3s ease-in;
+}
+#Description{
+  display:flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+}
+.button.fullwidth {
+    width: 100%;
+}
+
+.button.accent {
+    background: #ff6b6b;
+    color: #fff;
+    box-shadow: 0 2px 10px 2px rgba(252, 66, 122, 0.384);
+}
+
+.button:hover {
+    cursor: pointer;
+    box-shadow: 0 4px 15px 2px #ffffff7a;
+}
