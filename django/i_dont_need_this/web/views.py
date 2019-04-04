@@ -52,7 +52,7 @@ class dash(TemplateView):
         return render(request, "web/FrontEnd.html", {})
 
     def post(self, request):
-        otp = send_otp()
+        otp = send_otp(request.POST.get('phone'))
         try:
             user = User.objects.get(username=request.POST.get('phone'))
             print("user exists", user)
