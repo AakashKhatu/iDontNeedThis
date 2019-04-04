@@ -1,7 +1,8 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.contrib.auth import authenticate
+from django.contrib.auth import login
+from django.contrib.auth.models import User
 # Create your views here.
 
 
@@ -19,7 +20,8 @@ class dash(TemplateView):
         return render(request, "web/FrontEnd.html", {})
 
     def post(self, request):
-
+        # user =
+        user = login(request, user)
         return render(request, "web/FrontEnd.html", {})
 
 
