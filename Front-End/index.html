@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" type="text/css" media="screen" href="styles/landing.css">
     <link rel="stylesheet" type="text/css" media="screen" href="styles/login.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <script src="js/landing.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </head>
@@ -25,11 +28,11 @@
     </section>
     <section class="hero container">
         <div class="content">
-            <p class="title">Have stuff lying around that you don't need?</p>
-            <p class="subtitle">We can help!</p>
-            <a href="#" onclick="animateOnLogin('.auth-popup-container')" class="button">Get Started</a>
+            <p class="title" data-aos="fade-right">Have stuff lying around that you don't need?</p>
+            <p class="subtitle" data-aos="fade-right" data-aos-delay="200">We can help!</p>
+            <a href="#" onclick="animateOnLogin('.auth-popup-container')"  data-aos="fade-right" data-aos-delay="400" class="button">Get Started</a>
         </div>
-        <img src="icons/hero-1.svg" />
+        <img src="icons/hero-1.svg" data-aos="fade-left" data-aos-delay="150" />
     </section>
     <section class="auth-popup-container">
         <div class="auth-backdrop" onclick="animateClose('.auth-popup-container')"></div>
@@ -61,8 +64,26 @@
             </form>
         </div>
     </section>
-    <section class="info">
-
+    <section class="info-container">
+        <div class="info">
+            <div data-aos="fade-right">
+                <h1>Buy Less.</h1>
+                <p>We often buy WAY too much food. We can't eat all of it before it goes bad. Buy less than you think you need. You'll typically wind up with the right amount. 
+                        You can always stop by the store to pick up a couple of things if you need more, but you can't reverse the aging greens in your crisper drawer. 
+                </p>        
+            </div>
+            <img src="icons/food.jpg" data-aos="fade-left" data-aos-delay="200" class="image" />
+        </div>
+    </section>
+    <section class="info-container">
+        <div class="info">
+            <img src="icons/books.jpg" data-aos="fade-right" data-aos-delay="200" class="image"/>
+            <div data-aos="fade-left">
+                    <h1>Save Paper</h1>
+                    <p>Increase the use of E-Books and E-Newspapers. Promote emailing and sharing the documents in the soft copy form.</p>
+                    <p>Highly fancy and thick wedding cards are purely waste of money and paper. They also contribute in polluting the water bodies as most of the cards are being thrown in water bodies. So the wedding cards should be in the Electronic form or should be of basic kind which use the minimum paper.</p>        
+                </div>
+        </div>
     </section>
 </body>
 </html>
