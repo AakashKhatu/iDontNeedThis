@@ -20,7 +20,11 @@ class dash(TemplateView):
         return render(request, "web/FrontEnd.html", {})
 
     def post(self, request):
-        # user =
+        user = User.objects.get(username=request.POST.get('phone'))
+        if user is None:
+            user = User.objects.create_user(
+                request.POST.get('phone'), 'test@test.com', 'password')
+            user.save()
         user = login(request, user)
         return render(request, "web/FrontEnd.html", {})
 
