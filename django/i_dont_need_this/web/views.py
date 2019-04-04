@@ -11,7 +11,15 @@ class index(TemplateView):
         return render(request, "web/index.html", {})
 
     def post(self, request):
-        print(request.POST)
+        try:
+            user = User.objects.get(username=request.POST.get('phone'))
+            print("user exists", user)
+        except User.DoesNotExist:
+            user = User.objects.create_user(
+                request.POST.get('phone'), 'test@test.com', 'password')
+            user.save()
+            print("created user", user)
+        user = login(request, user)
         return render(request, "web/index.html", {})
 
 
@@ -20,11 +28,14 @@ class dash(TemplateView):
         return render(request, "web/FrontEnd.html", {})
 
     def post(self, request):
-        user = User.objects.get(username=request.POST.get('phone'))
-        if user is None:
+        try:
+            user = User.objects.get(username=request.POST.get('phone'))
+            print("user exists", user)
+        except User.DoesNotExist:
             user = User.objects.create_user(
                 request.POST.get('phone'), 'test@test.com', 'password')
             user.save()
+            print("created user", user)
         user = login(request, user)
         return render(request, "web/FrontEnd.html", {})
 

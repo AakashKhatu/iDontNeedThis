@@ -47,7 +47,8 @@
                 <img src="{% static "icons/close.svg" %}" class="close" alt="close"
                     onclick="animateClose('.auth-popup-container')" />
             </div>
-            <form action="" class="auth-form">
+            <form method="post" class="auth-form">
+                {% csrf_token %}
                 <div class="input-field">
                     <input name="phone" id="phone" oninput="this.setCustomValidity('')"
                         oninvalid="this.setCustomValidity('Please enter a valid phone number.')"
