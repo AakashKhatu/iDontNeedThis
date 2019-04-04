@@ -11,8 +11,9 @@
     <meta name="theme-color" content="#ff6b6b">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" type="text/css" media="screen" href="{% static "styles/landing.css" %}">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static "styles/login.css" %}">
     <script src="{% static "js/landing.js" %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </head>
 
 <body>
@@ -20,8 +21,8 @@
         <h1>I don't need this</h1>
         <div class="links">
             <p>About Us</p>
-            <p onclick="animateOnLogin()">Login</p>
-            <p onclick="animateOnLogin()">Sign Up</p>
+            <p onclick="animateOnLogin('.auth-popup-container')">Login</p>
+            <p onclick="animateOnLogin('.auth-popup-container')">Sign Up</p>
 
         </div>
     </section>
@@ -29,12 +30,13 @@
         <div class="content">
             <p class="title">Have stuff lying around that you don't need?</p>
             <p class="subtitle">We can help!</p>
-            <a href="{% url "dashboard" %}" class="button">Get Started</a>
+            <a href="{% url "dashboard" %}" onclick="animateOnLogin('.auth-popup-container')" class="button">Get
+                Started</a>
         </div>
         <img src="{% static "icons/hero-1.svg" %}" />
     </section>
     <section class="auth-popup-container">
-        <div class="auth-backdrop" onclick="animateClose()"></div>
+        <div class="auth-backdrop" onclick="animateClose('.auth-popup-container')"></div>
         <div class="auth-popup card">
             <div class="auth-side">
                 <div>
@@ -42,9 +44,10 @@
                     <p>Get access to all your previous donations and incentives.</p>
                 </div>
                 <img src="{% static "icons/auth.svg" %}" alt="login" />
-                <img src="{% static "icons/close.svg" %}" class="close" alt="close" onclick="animateClose()" />
+                <img src="{% static "icons/close.svg" %}" class="close" alt="close"
+                    onclick="animateClose('.auth-popup-container')" />
             </div>
-            <form action="." method="post" class="auth-form">
+            <form method="post" class="auth-form">
                 {% csrf_token %}
                 <div class="input-field">
                     <input name="phone" id="phone" oninput="this.setCustomValidity('')"
@@ -53,13 +56,16 @@
                     <label for="phone">Phone</label>
                 </div>
                 <div class="input-field">
-                    <input name="password" id="password" required oninput="this.setCustomValidity('')" minlength="6"
+                    <input id="password" required oninput="this.setCustomValidity('')" minlength="6"
                         oninvalid="this.setCustomValidity('Password should be 6 characters long.')" type="password">
                     <label for="password">Password</label>
                 </div>
                 <button type="submit" class="button accent fullwidth">Submit</button>
             </form>
         </div>
+    </section>
+    <section class="info">
+
     </section>
 </body>
 

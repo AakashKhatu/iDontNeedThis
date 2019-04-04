@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView
-
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth import login
+from django.contrib.auth.models import User
 # Create your views here.
 
 
@@ -9,13 +11,40 @@ class index(TemplateView):
         return render(request, "web/index.html", {})
 
     def post(self, request):
-        print(request.POST)
+        try:
+            user = User.objects.get(username=request.POST.get('phone'))
+            print("user exists", user)
+        except User.DoesNotExist:
+            user = User.objects.create_user(
+                request.POST.get('phone'), 'test@test.com', 'password')
+            user.save()
+            print("created user", user)
+        user = login(request, user)
         return render(request, "web/index.html", {})
 
 
 class dash(TemplateView):
     def get(self, request):
         return render(request, "web/FrontEnd.html", {})
+
+    def post(self, request):
+        try:
+            user = User.objects.get(username=request.POST.get('phone'))
+            print("user exists", user)
+        except User.DoesNotExist:
+            user = User.objects.create_user(
+                request.POST.get('phone'), 'test@test.com', 'password')
+            user.save()
+            print("created user", user)
+        user = login(request, user)
+        return render(request, "web/FrontEnd.html", {})
+
+
+class profile(LoginRequiredMixin, TemplateView):
+    login_url = '/'
+
+    def get(self, request):
+        return render(request, "web/profile.html", {})
 
     def post(self, request):
         print(request.POST)
