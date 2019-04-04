@@ -1,0 +1,18 @@
+*{
+    padding:0;
+    margin: 0;
+}
+#console #text{
+    width: 100vw;
+    min-height: 100vh;
+    background: black;
+}
+#text{
+    color: green;
+    font-family:"Product Sans", sans-serif;
+    font-size:large;
+}
+
+::selection{
+    background: white;
+}
