@@ -1,0 +1,41 @@
+* {
+    font-family: 'Product Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1368px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.form-cont {
+    margin-top: 50px;
+}
+
+.profile-header {
+    color: #000;
+    padding-left: 50px;
+    height: 24vh;
+    border-bottom:1px solid rgba(184, 184, 184, 0.27);
+    display: flex;
+    align-items: center;
+}
+
+.profile-dp {
+    width: 100px;
+    margin-right: 60px;
+    border-radius: 50%;
+    box-shadow: 0px 5px 20px 4px rgba(44, 43, 43, 0.212);
+}
+
+.profile-header-info h3 {
+    font-weight: bold;
+    margin: 10px 0;
+    font-size: 2rem;
+}
+
+.profile-header-info p {
+    font-weight: normal;
+}
