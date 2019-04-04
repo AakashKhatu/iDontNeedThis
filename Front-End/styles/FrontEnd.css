@@ -194,3 +194,8 @@ a{
 .popup-form {
   margin-left: 30px;
 }
+
+.popup h1 {
+  color: #fff;
+  padding: 10px;
+}

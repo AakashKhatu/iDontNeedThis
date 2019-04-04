@@ -51,6 +51,7 @@ const getPropsFromId = id => {
         case 'food':
             return {
                 name: 'Food',
+                color: '#1f004d',
                 attributes: [
                     {
                         name: 'Description',
@@ -69,6 +70,7 @@ const getPropsFromId = id => {
         case 'books':
             return {
                 name: 'Stationary',
+                color: '#cc5200',
                 attributes: [
                     {
                         name: 'Description',
@@ -83,6 +85,7 @@ const getPropsFromId = id => {
         case 'Furniture':
             return {
                 name: 'Furniture',
+                color: '#0063cc',
                 attributes: [
                     {
                         name: 'Description',
@@ -101,6 +104,7 @@ const getPropsFromId = id => {
         case 'Electronics':
             return {
                 name: 'Electronics',
+                color: '#196619',
                 attributes: [
                     {
                         name: 'Description',
@@ -119,6 +123,7 @@ const getPropsFromId = id => {
         case 'cloth':
             return {
                 name: 'Electronics',
+                color: '#cc00cc',
                 attributes: [
                     {
                         name: 'Material',
@@ -133,6 +138,7 @@ const getPropsFromId = id => {
         case 'medi':
             return {
                 name: 'Medicines',
+                color: '#b38300',
                 attributes: [
                     {
                         name: 'Description',
@@ -147,6 +153,7 @@ const getPropsFromId = id => {
         case 'bed':
             return {
                 name: 'Bedding',
+                color: '#ff1a1a',
                 attributes: [
                     {
                         name: 'Description',
@@ -171,6 +178,7 @@ const openPopUp = id => {
         form.removeChild(form.firstChild);
     }
     h1.innerText = props.name;
+    h1.style.backgroundColor = props.color;
     props.attributes.forEach(attr => {
         const parentDiv = document.createElement('div');
         const attrInput = document.createElement('input');
