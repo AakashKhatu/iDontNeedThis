@@ -53,20 +53,24 @@ class dash(TemplateView):
 
     def post(self, request):
         otp = send_otp(request.POST.get('phone'))
-        try:
-            user = User.objects.get(username=request.POST.get('phone'))
-            print("user exists", user)
-        except User.DoesNotExist:
-            user = User.objects.create_user(
-                request.POST.get('phone'), 'test@test.com', 'password')
-            user.save()
-            print("created user", user)
-        if otp == request.POST.get('password'):
-            print("validated")
+        if 'login' in request.POST:
+            try:
+                user = User.objects.get(username=request.POST.get('phone'))
+                print("user exists", user)
+            except User.DoesNotExist:
+                user = User.objects.create_user(
+                    request.POST.get('phone'), 'test@test.com', 'password')
+                user.save()
+                print("created user", user)
+            if otp == request.POST.get('password'):
+                print("validated")
+            else:
+                print("LOL")
+            user = login(request, user)
+            return render(request, "web/FrontEnd.html", {})
         else:
-            print("LOL")
-        user = login(request, user)
-        return render(request, "web/FrontEnd.html", {})
+            print(request.POST)
+            return render(request, "web/submit.html", {})
 
 
 class profile(LoginRequiredMixin, TemplateView):
