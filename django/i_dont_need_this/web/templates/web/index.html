@@ -25,8 +25,8 @@
         <div class="links">
             <p>About Us</p>
             {{ phnum }}
-            {% if phnum is not None %}
-            <a href="{% url "profile" %}">Logged In as: {{ phnum }}</a>
+            {% if user.is_authenticated %}
+            <a href="{% url "profile" %}" style="color: White">Logged In as: {{ user.username }}</a>
             {% else %}
             <p onclick="animateOnLogin('.auth-popup-container')">Login</p>
             <p onclick="animateOnLogin('.auth-popup-container')">Sign Up</p>
