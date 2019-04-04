@@ -20,9 +20,24 @@
     <section class="form-cont container">  
         <h1>Your Profile</h1>
         <form action="" class="form">
-            <label>Email
+            <div class="profile-input">
+                <label>Name</label>
+                <input type="name" value="Ajesh" name="name" />
+            </div>
+            <div class="profile-input">
+                <label>Email</label>
                 <input type="email" value="ajeshd17@gmail.com" name="email" />
-            </label>
+            </div>
+            <!-- TODO: Handle Password -->
+            <div class="profile-input">
+                <label>Password</label>
+                <button class="button accent">Change Password</button>
+            </div>
+            <div class="profile-input">
+                <label>Address</label>
+                <input type="address" value="B05 Yamuna, Anushaktinagar, Mumbai" name="address" />
+            </div>
+            <button type="submit" class="button">Save Changes</button>
         </form>
     </section>
 </body>
