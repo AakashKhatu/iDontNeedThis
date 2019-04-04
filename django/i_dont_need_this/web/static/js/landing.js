@@ -16,7 +16,7 @@ const animateOnLogin = e => {
     container.style.zIndex = 2;
 }
 
-const openFaq = () => { location.href = 'faq.html' } 
+const openFaq = () => { location.href = 'faq.html' }
 
 const openPassword = () => {
     const passwords = document.getElementsByClassName('password');
@@ -37,7 +37,7 @@ const clickedNext = () => {
     const phone = phoneField.value;
     const isValidP = /\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}/;
     if (isValidP.test(phone)) {
-       openPassword(); 
+        openPassword();
     }
     console.log(isValidP.test(phone));
 }
@@ -45,11 +45,11 @@ const clickedNext = () => {
 const animateClose = e => {
     const container = document.querySelector(e);
     container.style.opacity = 0;
-    setTimeout(() => {container.style.zIndex = -10}, 500);
+    setTimeout(() => { container.style.zIndex = -10 }, 500);
 }
 
 const getPropsFromId = id => {
-    switch(id) {
+    switch (id) {
         case 'food':
             return {
                 name: 'Food',
@@ -176,8 +176,8 @@ const openPopUp = id => {
         return;
     const h1 = document.querySelector('body > section.popup-container > div.popup > h1');
     const form = document.querySelector('body > section.popup-container > div.popup > form');
-    while(form.firstChild) {
-        form.removeChild(form.firstChild);
+    while (form.children[1]) {
+        form.removeChild(form.children[1]);
     }
     h1.innerText = props.name;
     h1.style.backgroundColor = props.color;
@@ -204,6 +204,7 @@ const openPopUp = id => {
     const button = document.createElement('button');
     button.type = 'submit';
     button.innerText = "SUBMIT";
+    button.name = props.name;
     button.classList.add('button');
     button.classList.add('accent');
     form.appendChild(button);
