@@ -124,7 +124,7 @@ const getPropsFromId = id => {
             }
         case 'cloth':
             return {
-                name: 'Electronics',
+                name: 'Clothes',
                 color: '#cc00cc',
                 attributes: [
                     {

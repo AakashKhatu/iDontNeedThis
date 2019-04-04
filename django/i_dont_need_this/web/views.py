@@ -21,6 +21,10 @@ def faq_view(request):
     return render(request, 'web/faq.html', {})
 
 
+def submit_view(request):
+    return render(request, 'web/submit.html', {})
+
+
 class index(TemplateView):
     def get(self, request):
         if request.user.is_authenticated:
@@ -70,7 +74,7 @@ class dash(TemplateView):
             return render(request, "web/FrontEnd.html", {})
         else:
             print(request.POST)
-            return render(request, "web/submit.html", {})
+            return redirect("submit")
 
 
 class profile(LoginRequiredMixin, TemplateView):
