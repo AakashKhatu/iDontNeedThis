@@ -1,0 +1,168 @@
+* {
+    font-family: 'Product Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1368px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.form-cont {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.form {
+    margin-top: 30px;
+}
+
+.profile-header {
+    color: #000;
+    padding-left: 50px;
+    height: 24vh;
+    border-bottom:1px solid rgba(184, 184, 184, 0.27);
+    display: flex;
+    align-items: center;
+}
+
+.profile-dp {
+    width: 100px;
+    margin-right: 60px;
+    border-radius: 50%;
+    box-shadow: 0px 5px 20px 4px rgba(44, 43, 43, 0.212);
+}
+
+.profile-header-info h3 {
+    font-weight: bold;
+    margin: 10px 0;
+    font-size: 2rem;
+}
+
+.profile-header-info p {
+    font-weight: normal;
+}
+
+.profile-input {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    align-items: center;
+}
+
+#esp {
+    justify-content: flex-start;
+}
+
+.profile-input input {
+    border: 1px solid rgba(44, 43, 43, 0.212);
+    border-radius: 4px;
+    padding: 20px; 
+    width: 100%;
+}
+
+.profile-input label {
+    min-width: 100px;
+}
+
+.button {
+    background: #ff6b6b;
+    border: none;
+    display: inline-block;
+    margin-top: 10px;
+    outline: none;
+    text-decoration: none;
+    border-radius: 4px;
+    color: #fff;
+    padding: 10px 15px;
+    box-shadow: 0 2px 10px 2px #ff6b6b62;
+    transition: all 0.3s ease-in;
+}
+
+.button.accent {
+    color: #ff6b6b;
+    background: #fff;
+    box-shadow: 0 2px 10px 2px #00000012;
+}
+
+.button:hover {
+    box-shadow: 0 5px 15px 2px #ff6b6b62;
+    cursor: pointer;
+}
+
+.button.accent:hover {
+    box-shadow: 0 5px 14px 2px #00000012;
+    cursor: pointer;
+}
+
+.popup-container {
+    position: absolute;
+    z-index: -10;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #00000075;
+    opacity: 0;
+    transition: opacity 0.2s ease-in;
+}
+
+.popup {
+    height: 50%;
+    width: 50%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 3px;
+    position: relative;
+    box-shadow: 0 2px 11px #00000061;
+}
+
+.popup-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+.close {
+    position: absolute;
+    top: 31px;
+    left: 89%;
+    height: 20px;
+    display: none;
+}
+
+@media only screen and (max-width: 500px) {
+    .pop {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .popup {
+        height: 100vh;
+        width: 100vw;
+
+    }
+
+    .form-cont {
+        margin-top: 100px;
+    }
+
+    .form {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+    .close {
+        display: inherit;
+    }
+}

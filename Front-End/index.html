@@ -17,8 +17,8 @@
             <h1>I don't need this</h1>
             <div class="links">
                 <p>About Us</p>
-                <p onclick="animateOnLogin()">Login</p>
-                <p onclick="animateOnLogin()">Sign Up</p>
+                <p onclick="animateOnLogin('.auth-popup-container')">Login</p>
+                <p onclick="animateOnLogin('.auth-popup-container')">Sign Up</p>
 
             </div>
     </section>
@@ -26,12 +26,12 @@
         <div class="content">
             <p class="title">Have stuff lying around that you don't need?</p>
             <p class="subtitle">We can help!</p>
-            <a href="#" onclick="animateOnLogin()" class="button">Get Started</a>
+            <a href="#" onclick="animateOnLogin('.auth-popup-container')" class="button">Get Started</a>
         </div>
         <img src="icons/hero-1.svg" />
     </section>
     <section class="auth-popup-container">
-        <div class="auth-backdrop" onclick="animateClose()"></div>
+        <div class="auth-backdrop" onclick="animateClose('.auth-popup-container')"></div>
         <div class="auth-popup card">
             <div class="auth-side">
                 <div>
@@ -39,7 +39,7 @@
                         <p>Get access to all your previous donations and incentives.</p>        
                 </div>
                 <img src="icons/auth.svg" alt="login"/>
-                <img src="icons/close.svg" class="close" alt="close" onclick="animateClose()"/>
+                <img src="icons/close.svg" class="close" alt="close" onclick="animateClose('.auth-popup-container')"/>
             </div>
             <form action="" class="auth-form">
                     <div class="input-field">
