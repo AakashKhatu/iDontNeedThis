@@ -21,6 +21,11 @@
 
 }
 
+.password {
+    display: none;
+    opacity: 0;
+}
+
 .close {
     position: absolute;
     top: 10px;
@@ -50,6 +55,7 @@
 
 .auth-form input {
     color: #000;
+    transition: all 0.3s ease-in;
 }
 
 .auth-form .input-field input[type=tel]:focus,
