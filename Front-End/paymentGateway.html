@@ -11,20 +11,21 @@
     <form id="transaction-page" method="post">
       <div id="pg1">
         <div id="bar">
-          <a id="back" href="FrontEnd.html">Back</a>
+          <a href="FrontEnd.html"><img src="icons/back.svg" /></a>
           <p>Banking Transactions</p>
         </div>
         <div id="PayUI">
-          <div id="Name">
+          <h1>Payment Details</h1>
+          <div class="input-field">
             <label id="name" for="name">Name</label>
             <input type="text" value="" placeholder="Type your name here" required>
           </div>
-          <div id="Card-No">
+          <div class="input-field">
             <label id="cardno" for="Card-No.">Card No.</label>
             <input type="tel" placeholder="XXXX-XXXX-XXXX-XXXX" pattern="^[0-9]{4}(\-)?[0-9]{4}(\-)?[0-9]{4}(\-)?[0-9]{4}" min="16" max="20" required autocomplete="off"> <br>
           </div>
-          <div id="div2">
-            <div id="cardType">
+          <div>
+            <div class="input-field">
               <label id="card" for="opt">Card</label>
               <select id="opt" name="credit/debit-card">
                 <option selected="selected" value="none"><span>Select an option</span></option>
@@ -32,18 +33,20 @@
                 <option id="Debit" value="Debit">Debit</option>
               </select>
             </div>
-            <div id="Expire">
-              <label id="expire" for="">Date of Expiry</label>
-              <div id="monthnyear">
-                <input id="month" type="number" placeholder="MM" pattern="[0-12]" value="" min="0" max="12">
-                <input id="year" type="number" placeholder="YYYY" value="" pattern="[0-9]{4}" min="2019">
-              </div>
-            </div>
           </div>
-          <div class="CVV">
+          <div id="two-line">
+          <div  class="input-field" style="width: auto; margin-right: 30px;">
             <label id="cvv" for="cvv">CVV</label>
             <input type="password" pattern="[0-9]{3}" value="">
           </div>
+          <div class="input-field">
+              <label id="expire" for="">Date of Expiry</label>
+              <div id="monthnyear">
+                <input id="month" type="number" placeholder="MM" pattern="[1-12]" value="" min="0" max="12">
+                <input id="year" type="number" placeholder="YYYY" value="" pattern="[0-9]{4}" min="2019">
+              </div>
+          </div>
+        </div>
           <input type="submit" class="button" name="Submit" value="SUBMIT">
         </div>
       </div>
