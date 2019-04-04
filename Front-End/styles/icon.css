@@ -15,49 +15,116 @@ body{
   align-items: center;
   justify-content: center;
 }
-.loader{
+#loader{
   display: flex;
   flex-direction: row;
 }
 p{
-  margin-top: 10px;
+  margin-top: 60px;
   color:black;
-  font-size: 250px;
+  letter-spacing: -10px;
+  font-size: 225px;
 }
-.sphere1,.sphere2,.sphere3,.sphere4,.sphere5{
-  background-color: black;
+#sphere1,#sphere2,#sphere3,#sphere4,#sphere5{
+  background-color: white;
   border: solid 0 white;
-  margin: -20px 30px 0 30px;
+  margin: -70px 30px 0 30px;
   border-radius: 50%;
   height: 25px;
   position: relative;
   width: 25px;
 }
-.sphere1{
+#s1,#s2,#s3,#s4,#s5{
+  margin-top: -70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#sphere1{
   animation-name: bounce1;
   animation-iteration-count: infinite;
   animation-duration: 3s;
 }
-.sphere2{
+#sphere2{
   animation-name: bounce2;
   animation-iteration-count: infinite;
   animation-duration: 3s;
   animation-delay: 0.6s;
 }
-.sphere3{
+#sphere3{
   animation-name: bounce3;
   animation-iteration-count: infinite;
   animation-duration: 3s;
   animation-delay: 1.2s;
 }
-.sphere4{
+#sphere4{
   animation-name: bounce4;
   animation-iteration-count: infinite;
   animation-duration: 3s;
   animation-delay: 1.8s;
 }
-.sphere5{
+#sphere5{
   animation-name: bounce5;
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
+  animation-delay: 2.4s;
+}
+#sphere1-shadow{
+  margin: 0 30px 0 30px;
+  height: 10px;
+  box-shadow: 0 0 0 2px  #f2f2f2;
+  border-radius: 50%;
+  background-color: #b3b3b3;
+  width: 24px;
+  animation-name: bounce1-shadow;
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
+}
+#sphere2-shadow{
+  margin: 0 30px 0 30px;
+  height: 10px;
+  box-shadow: 0 0 0 2px  #f2f2f2;
+  border-radius: 50%;
+  background-color: #b3b3b3;
+  width: 24px;
+  animation-name: bounce2-shadow;
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
+  animation-delay: 0.6s;
+}
+#sphere3-shadow{
+  margin: 0 30px 0 30px;
+  height: 10px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px  #f2f2f2;
+  background-color: #b3b3b3;
+  width: 24px;
+  animation-name: bounce3-shadow;
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
+  animation-delay: 1.2s;
+}
+#sphere4-shadow{
+  margin: 0 30px 0 30px;
+  box-shadow: 0 0 0 2px  #f2f2f2;
+  border-radius: 50%;
+  height: 10px;
+  background-color: #b3b3b3;
+  width: 24px;
+  animation-name: bounce4-shadow;
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
+  animation-delay: 1.8s;
+}
+#sphere5-shadow{
+  margin: 0 30px 0 30px;
+  height: 10px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px  #f2f2f2;
+  background-color: #b3b3b3;
+  width: 24px;
+  animation-name: bounce5-shadow;
   animation-iteration-count: infinite;
   animation-duration: 3s;
   animation-delay: 2.4s;
@@ -182,6 +249,128 @@ a{
   100%{
     background-color: blue;
     bottom: 0px;
+    visibility: visible;
+  }
+}
+@keyframes bounce1-shadow {
+  0%{
+    width:24px;
+    background-color: #b3b3b3;
+  }
+  25%{
+    width: 17px;
+    background-color: #e6e6e6;
+  }
+  50%{
+    width:10px;
+    background-color: #f2f2f2;
+  }
+  75%{
+    width: 17px;
+    background-color: #e6e6e6;
+    visibility: visible;
+  }
+  100%{
+    width: 24px;
+    background-color: #b3b3b3;
+    visibility: visible;
+  }
+}
+@keyframes bounce2-shadow {
+  0%{
+    width:24px;
+    background-color: #b3b3b3;
+  }
+  25%{
+    width: 17px;
+    background-color: #e6e6e6;
+  }
+  50%{
+    width:10px;
+    background-color: #f2f2f2;
+  }
+  75%{
+    width: 17px;
+    background-color: #e6e6e6;
+    visibility: visible;
+  }
+  100%{
+    width:24px;
+    background-color: #b3b3b3;
+    visibility: visible;
+  }
+}
+@keyframes bounce3-shadow {
+  0%{
+    width:24px;
+    background-color: #b3b3b3;
+  }
+  25%{
+    width: 17px;
+    background-color: #e6e6e6;
+  }
+  50%{
+    width:10px;
+    background-color: #f2f2f2;
+  }
+  75%{
+    width: 17px;
+    background-color: #e6e6e6;
+    visibility: visible;
+  }
+  100%{
+    width:24px;
+    background-color: #b3b3b3;
+    visibility: visible;
+  }
+}
+
+@keyframes bounce4-shadow {
+  0%{
+    width:24px;
+    background-color: #b3b3b3;
+  }
+  25%{
+    width: 17px;
+    background-color: #e6e6e6;
+  }
+  50%{
+    width:10px;
+    background-color: #f2f2f2;
+  }
+  75%{
+    background-color: #e6e6e6;
+    width: 17px;
+    visibility: visible;
+  }
+  100%{
+    width:24px;
+    background-color: #b3b3b3;
+    visibility: visible;
+  }
+}
+
+@keyframes bounce5-shadow {
+  0%{
+    width:24px;
+    background-color: #b3b3b3;
+  }
+  25%{
+    width: 17px;
+    background-color: #e6e6e6;
+  }
+  50%{
+    width:10px;
+    background-color: #f2f2f2;
+  }
+  75%{
+    width: 17px;
+    background-color: #e6e6e6;
+    visibility: visible;
+  }
+  100%{
+    width:24px;
+    background-color: #b3b3b3;
     visibility: visible;
   }
 }

@@ -17,6 +17,7 @@ environment:
   sdk: ">=2.1.0 <3.0.0"
 
 dependencies:
+  qr_mobile_vision: ^0.0.7
   flutter:
     sdk: flutter
 

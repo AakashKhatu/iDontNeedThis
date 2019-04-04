@@ -3,6 +3,7 @@
 
 Servo serv1;
 int s;
+unsigned long starttime;
 void setup()
 {
     serv1.attach(13);
@@ -19,11 +20,17 @@ void loop()
         {
             serv1.write(90);
             Serial.println("open");
+			starttime = millis();
         }
         else if (s==50){
-          serv1.write(0);
-            Serial.println("close");
+			serv1.write(0);
+			Serial.println("close");
+			starttime=0;
         }
         Serial.println(s);
     }
+	if ((millis()-timeout==20000) && starttime){
+		serv1.write(0);
+		Serial.println("close");
+	}
 }
