@@ -5,8 +5,9 @@
 }
 
 body {
+    padding-top: 40px;
     background: #ff6b6b;
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
     flex-direction: column;
     transition: all 0.5s ease;
@@ -15,6 +16,11 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+h1, p {
+    text-align: center;
+}
+
 
 .mapouter {
     position: relative;
