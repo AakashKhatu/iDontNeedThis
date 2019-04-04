@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="assets/fonts.css">
     <link rel="stylesheet" type="text/css" media="screen" href="styles/profile.css">
-    <script src="js/profile.js"></script>
+    <script src="js/landing.js"></script>
 </head>
 <body>
     <nav class="profile-header">
@@ -28,17 +28,38 @@
                 <label>Email</label>
                 <input type="email" value="ajeshd17@gmail.com" name="email" />
             </div>
-            <!-- TODO: Handle Password -->
-            <div class="profile-input">
-                <label>Password</label>
-                <button class="button accent">Change Password</button>
-            </div>
             <div class="profile-input">
                 <label>Address</label>
                 <input type="address" value="B05 Yamuna, Anushaktinagar, Mumbai" name="address" />
             </div>
+            <!-- TODO: Handle Password -->
+            <div class="profile-input" id="esp">
+                    <label>Password</label>
+                    <button onclick="animateOnLogin('.popup-container')" type="button" class="button accent">Change Password</button>
+            </div>
             <button type="submit" class="button">Save Changes</button>
         </form>
+    </section>
+    <section class="popup-container">
+        <div onclick="animateClose('.popup-container')" class="popup-backdrop"></div>
+        <div class="popup form-cont">
+            <h1>Change Password</h1>
+            <form action="" class="form">
+                <div class="profile-input">
+                        <label>Current Password</label>
+                        <input type="password" name="cur_pwd" />
+                </div>
+                <div class="profile-input">
+                        <label>New Password</label>
+                        <input type="password" name="new_pwd" />
+                </div>
+                <div class="profile-input">
+                        <label>Confirm Password</label>
+                        <input type="password" name="new_pwd" />
+                </div>
+                <button type="submit" class="button">Save Changes</button>
+            </form>
+        </div>
     </section>
 </body>
 </html>
