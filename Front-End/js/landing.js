@@ -1,3 +1,6 @@
+window.onload = () => {
+    AOS.init();
+}
 const animateOnLogin = e => {
     const container = document.querySelector(e);
     container.style.opacity = 1;
