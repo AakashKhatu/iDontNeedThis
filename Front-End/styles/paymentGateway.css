@@ -1,0 +1,29 @@
+html{
+  display: flex;
+  flex-direction: column;
+}
+#back{
+  margin-left: 20px;
+  text-decoration: none;
+  margin-top: 30px;
+  height: 30px;
+  width:60px;
+  display: flex;
+  border:solid 2px red;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+#bar{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  border: solid 0 red;
+}
+p{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 
+}

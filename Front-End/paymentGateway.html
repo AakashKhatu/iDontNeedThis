@@ -5,12 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
-    <title></title>
+    <title>iDontNeedThis</title>
   </head>
   <body>
-    <input type="text" name="" value="">
     <form id="transaction-page" method="post">
-
+      <div id="pg1">
+        <div id="bar">
+          <a id="back" href="FrontEnd.html">Back</a>
+          <p>Banking Transactions</p>
+        </div>
+        <div id="Name">
+          <label for="name">Name:</label>
+          <input type="text" value="" placeholder="Type your name here">
+        </div>
+        <div id="Card-No">
+          <label for="Card-No.">Card No.</label>
+          <input type="tel" placeholder="XXXX-XXXX-XXXX-XXXX" pattern="^[0-9]{4}(\-)?[0-9]{4}(\-)?[0-9]{4}(\-)?[0-9]{4}" min="16" max="20" required><br>
+        </div>
+        <div id="div2">
+          <div id="cardType">
+          <label for="opt">Card</label>
+          <select id="opt" name="credit/debit-card">
+            <option id="Credit" value="Credit">Credit</option>
+            <option id="Debit" value="Debit">Debit</option>
+          </select>
+          </div>
+          <div id="Expire">
+            <label for="">Date of Expiry:</label>
+            <input type="date" value="">
+          </div>
+        </div>
+        <div class="cvv">
+          <label for="cvv">CVV:</label>
+          <input type="password" pattern="[0-9]{3}" value="">
+        </div>
+        <input type="submit" name="submit" value="submit">
+      </div>
     </form>
   </body>
 </html>
