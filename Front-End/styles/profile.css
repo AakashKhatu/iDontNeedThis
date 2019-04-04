@@ -12,6 +12,7 @@
 
 .form-cont {
     margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .form {
@@ -124,9 +125,44 @@
 }
 
 .popup-backdrop {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     height: 100vh;
     width: 100vw;
+}
+
+.close {
+    position: absolute;
+    top: 31px;
+    left: 89%;
+    height: 20px;
+    display: none;
+}
+
+@media only screen and (max-width: 500px) {
+    .pop {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .popup {
+        height: 100vh;
+        width: 100vw;
+
+    }
+
+    .form-cont {
+        margin-top: 100px;
+    }
+
+    .form {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+    .close {
+        display: inherit;
+    }
 }
