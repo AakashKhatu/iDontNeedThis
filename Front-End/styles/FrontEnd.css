@@ -8,12 +8,16 @@ display: flex;
 h1{
   font-size: 50px;
   margin-left: 30px;
+  user-select: none;
 }
-main{
+main,main:hover{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+}
+#food:hover,#bed:hover,#medi:hover,#Furniture:hover,#Electronics:hover,#books:hover,#cloth:hover{
+  cursor: pointer;
 }
 img{
   display: flex;
@@ -22,6 +26,8 @@ img{
   align-items: center;
   justify-content: center;
   width: 100px;
+  user-select: none;
+
 }
 .flex{
   border: solid 0 orange;
@@ -35,27 +41,30 @@ p{
   justify-content: center;
   margin-bottom: 60px;
   color: #fff;
+  user-select: none;
   font-size: 25px;
 }
 #food{
-background: linear-gradient(45deg,#330080,#e0ccff);
+background: linear-gradient(45deg,#1f004d,#330080,#e0ccff);
 }
 #books{
-  background: linear-gradient(45deg,#ff751a,#fff0e6);
-
+  background: linear-gradient(45deg,#cc5200,#ff751a,#fff0e6);
 }
 #Furniture{
-background: linear-gradient(45deg,#3396ff,#b3d6ff);
+background: linear-gradient(45deg,#0063cc,#3396ff,#b3d6ff);
 }
 #Electronics{
-  background: linear-gradient(45deg,#47d147,#d6f5d6);
+  background: linear-gradient(45deg,#196619,#47d147,#d6f5d6);
 }
 #medi{
-background: linear-gradient(45deg,#ffd86c,#ffecb3);
+background: linear-gradient(45deg,#b38300,#ffbb00,#ffecb3);
 }
 #cloth{
-background: linear-gradient(45deg,#e600e6,#ff66ff,#ffe6ff);
+background: linear-gradient(45deg,#cc00cc,#ff66ff,#ffe6ff);
 }
 #bed{
   background: linear-gradient(45deg,#ff1a1a,#ffe6e6);
+}
+a{
+  color: red;
 }
