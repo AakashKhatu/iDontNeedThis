@@ -67,6 +67,18 @@ h1, p {
     font-size: 1.4rem;
 }
 
+.info h1 {
+    max-width: 200px;
+    background: #ff6b6b;
+    padding: 3px;
+    color: #fff !important;
+}
+
+.info:nth-child(2) > h1 {
+    color: #ff6b6b;
+    background: #fff;
+}
+
 .info .image {
     width: 30%;
     margin: 0 50px;
