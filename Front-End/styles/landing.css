@@ -67,6 +67,7 @@ h1 {
     border: none;
     display: inline-block;
     margin-top: 10px;
+    outline: none;
     text-decoration: none;
     border-radius: 4px;
     color: #ff6b6b;
@@ -237,4 +238,10 @@ h1 {
         left: 45% !important;
         display: inherit !important;
     }
+}
+
+@keyframes gradient { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
 }
