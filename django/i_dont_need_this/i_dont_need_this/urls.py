@@ -18,10 +18,6 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-<<<<<<< HEAD
-    path('web/', include('web.urls')),
-=======
     path('', include('web.urls')),
->>>>>>> f411661811fe07bc967920df4b15761602c9c96e
     path('scan/', include('qr.urls')),
 ]

@@ -1,57 +1,61 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="assets/fonts.css">
-    <link rel="stylesheet" href="styles/FrontEnd.css" media="screen" type="text/css">
-    <title>iDontNeedThis</title><h1><a>i</a>DontNeedThis</h1><br>
-  </head>
-  <body>
-    <main id="main">
-      <div id="food" class="flex">
-        <div class="icon">
-          <img src="icons/pizza-slice-solid.svg" alt="food">
-        </div>
-        <p >Food</p>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{% static "assets/fonts.css" %}">
+  <link rel="stylesheet" href="{% static "styles/FrontEnd.css" %}" media="screen" type="text/css">
+  <title>iDontNeedThis</title>
+  <h1><a>i</a>DontNeedThis</h1><br>
+</head>
+
+<body>
+  <main id="main">
+    <div id="food" class="flex">
+      <div class="icon">
+        <img src="{% static "icons/pizza-slice-solid.svg" %}" alt="food">
       </div>
-      <div id="books" class="flex">
-        <div class="icon">
-          <img src="icons/book-solid.svg" alt="">
-        </div>
-        <p>Books</p>
+      <p>Food</p>
+    </div>
+    <div id="books" class="flex">
+      <div class="icon">
+        <img src="{% static "icons/book-solid.svg" %}" alt="">
       </div>
-      <div id="Furniture" class="flex">
-        <div class="icon">
-          <img src="icons/couch-solid.svg" alt="">
-        </div>
-        <p>Furniture</p>
+      <p>Books</p>
+    </div>
+    <div id="Furniture" class="flex">
+      <div class="icon">
+        <img src="{% static "icons/couch-solid.svg" %}" alt="">
       </div>
-      <div id="Electronics" class="flex">
-        <div class="icon">
-          <img src="icons/laptop-solid.svg" alt="">
-        </div>
-        <p>Electronics</p>
+      <p>Furniture</p>
+    </div>
+    <div id="Electronics" class="flex">
+      <div class="icon">
+        <img src="{% static "icons/laptop-solid.svg" %}" alt="">
       </div>
-      <div id="cloth" class="flex">
-        <div class="icon">
-          <img src="icons/tshirt-solid.svg" alt="">
-        </div>
-        <p>Clothes</p>
+      <p>Electronics</p>
+    </div>
+    <div id="cloth" class="flex">
+      <div class="icon">
+        <img src="{% static "icons/tshirt-solid.svg" %}" alt="">
       </div>
-      <div id="medi" class="flex">
-        <div class="icon">
-          <img src="icons/syringe-solid.svg" alt="">
-        </div>
-        <p>Medicines</p>
+      <p>Clothes</p>
+    </div>
+    <div id="medi" class="flex">
+      <div class="icon">
+        <img src="{% static "icons/syringe-solid.svg" %}" alt="">
       </div>
-      <div class="flex" id="bed">
-        <div class="icon">
-          <img src="icons/bed-solid.svg" alt="">
-          <p>Bedding</p>
-        </div>
+      <p>Medicines</p>
+    </div>
+    <div class="flex" id="bed">
+      <div class="icon">
+        <img src="{% static "icons/bed-solid.svg" %}" alt="">
+        <p>Bedding</p>
       </div>
-    </main>
-  </body>
+    </div>
+  </main>
+</body>
+
 </html>
