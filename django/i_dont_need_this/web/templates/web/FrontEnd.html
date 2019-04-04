@@ -60,11 +60,12 @@
       </form>
     </div>
   </section>
-  < <div id="food" onclick="" class="flex">
-    <div class="icon">
-      <img src="{% static "icons/pizza-slice-solid.svg" %}" alt="food">
-    </div>
-    <p>Food</p>
+  <main id="main">
+    <div id="food" onclick="" class="flex">
+      <div class="icon">
+        <img src="{% static "icons/pizza-slice-solid.svg" %}" alt="food">
+      </div>
+      <p>Food</p>
     </div>
     <div id="books" class="flex">
       <div class="icon">
@@ -108,16 +109,16 @@
         <p>Money Transfer</p>
       </div>
     </div>
-    </main>
-    <section class="popup-container">
-      <div onclick="animateClose('.popup-container')" class="popup-backdrop"></div>
-      <div class="popup">
-        <h1>Dummy</h1>
-        <form method="post" class="popup-form">
-          {% csrf_token %}
-        </form>
-      </div>
-    </section>
+  </main>
+  <section class="popup-container">
+    <div onclick="animateClose('.popup-container')" class="popup-backdrop"></div>
+    <div class="popup">
+      <h1>Dummy</h1>
+      <form method="post" class="popup-form">
+        {% csrf_token %}
+      </form>
+    </div>
+  </section>
 
 </body>
 
