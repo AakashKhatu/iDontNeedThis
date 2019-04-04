@@ -42,6 +42,12 @@ h1 {
     cursor: pointer;
 }
 
+.info {
+    height: 100vh;
+    width: 100vw;
+    background: #fff;
+}
+
 .hero {
     height: 90vh;
     display: flex;
