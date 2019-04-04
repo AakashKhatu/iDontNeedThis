@@ -25,6 +25,10 @@ def submit_view(request):
     return render(request, 'web/submit.html', {})
 
 
+def pay_view(request):
+    return render(request, 'web/paymentGateway.html', {})
+
+
 class index(TemplateView):
     def get(self, request):
         if request.user.is_authenticated:

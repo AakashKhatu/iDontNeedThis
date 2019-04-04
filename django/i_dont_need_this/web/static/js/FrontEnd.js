@@ -10,7 +10,7 @@ const foodDesc = e => {
     container.style.opacity = 0;
     setTimeout(() => {container.style.zIndex = -10}, 500);
 }*/
-const Money = function(){
+const Money = function () {
   console.log('clicked')
   window.location.href = "paymentGateway.html";
 }

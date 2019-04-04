@@ -20,11 +20,11 @@
   <section class="nav">
     <h1><a>i</a>DontNeedThis</h1><br>
     <div class="links">
-      <a href={% url "about" %}>About Us&nbsp;&nbsp;&nbsp;</a>
-      <a href="{% url "faq" %}">FAQ&nbsp;&nbsp;&nbsp;</a>
+      <p onclick="location.href = '{% url 'about' %}';">About Us</p>
+      <p onclick="location.href=" {% url "faq" %}";">FAQ</p>
       {% if user.is_authenticated %}
-      <a href="{% url "logout" %}">Logout</a>
-      <a href="{% url "profile" %}">Logged In as: {{ user.username }}</a>
+      <p onclick="location.href=" {% url "logout" %}";">Logout</p>
+      <p onclick="location.href=" {% url "profile" %}";">Logged In as: {{ user.username }}</p>
       {% else %}
       <p onclick="animateOnLogin('.auth-popup-container')">Login</p>
       <p onclick="animateOnLogin('.auth-popup-container')">Sign Up</p>
@@ -103,7 +103,7 @@
         <p>Bedding</p>
       </div>
     </div>
-    <div class="flex" onclick="Money()" id="money">
+    <div class="flex" onclick="location.href=" {% url "pay" %}";" id="money">
       <div class="icon">
         <img src="{% static "icons/credit-card-solid.svg" %}" alt="">
         <p>Money Transfer</p>
