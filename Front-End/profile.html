@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,15 +10,16 @@
     <link rel="stylesheet" type="text/css" media="screen" href="styles/profile.css">
     <script src="js/landing.js"></script>
 </head>
+
 <body>
     <nav class="profile-header">
         <img class="profile-dp" src="icons/dummydp.jpg" />
         <div class="profile-header-info">
-                <p>Hi,</p>
-                <h3>Ajesh DS</h3>
+            <p>Hi,</p>
+            <h3>Ajesh DS</h3>
         </div>
     </nav>
-    <section class="form-cont container">  
+    <section class="form-cont container">
         <h1>Your Profile</h1>
         <form action="" class="form">
             <div class="profile-input">
@@ -34,8 +36,9 @@
             </div>
             <!-- TODO: Handle Password -->
             <div class="profile-input" id="esp">
-                    <label>Password</label>
-                    <button onclick="animateOnLogin('.popup-container')" type="button" class="button accent">Change Password</button>
+                <label>Password</label>
+                <button onclick="animateOnLogin('.popup-container')" type="button" class="button accent">Change
+                    Password</button>
             </div>
             <button type="submit" class="button">Save Changes</button>
         </form>
@@ -44,23 +47,24 @@
         <div onclick="animateClose('.popup-container')" class="popup-backdrop"></div>
         <div class="popup form-cont">
             <h1>Change Password</h1>
-            <img src="icons/close.1.svg" class="close" alt="close" onclick="animateClose('.popup-container')"/>
-            <form action="" class="form">
+            <img src="icons/close.1.svg" class="close" alt="close" onclick="animateClose('.popup-container')" />
+            <form action="." method="post" class="form">
                 <div class="profile-input pop">
-                        <label>Current Password</label>
-                        <input type="password" name="cur_pwd" />
+                    <label>Current Password</label>
+                    <input name="oldpass" type="password" name="cur_pwd" />
                 </div>
                 <div class="profile-input pop">
-                        <label>New Password</label>
-                        <input type="password" name="new_pwd" />
+                    <label>New Password</label>
+                    <input name="newpass" type="password" name="new_pwd" />
                 </div>
                 <div class="profile-input pop">
-                        <label>Confirm Password</label>
-                        <input type="password" name="new_pwd" />
+                    <label>Confirm Password</label>
+                    <input name type="password" name="new_pwd" />
                 </div>
                 <button type="submit" class="button">Save Changes</button>
             </form>
         </div>
     </section>
 </body>
+
 </html>

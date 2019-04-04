@@ -1,18 +1,11 @@
-document.addEventListener("DOMContentLoaded", e => {
-    setTimeout(() => {
-        animateOnLogin();
-    }, 3000);
-});
-
 const animateOnLogin = e => {
-    const container = document.querySelector(".auth-popup-container");
-    container.style.zIndex = 2;
+    const container = document.querySelector(e);
     container.style.opacity = 1;
+    container.style.zIndex = 2;
 }
 
 const animateClose = e => {
-    const backdrop = document.querySelector('.auth-backdrop');
-    const container = document.querySelector(".auth-popup-container");
-    container.style.zIndex = -10;
+    const container = document.querySelector(e);
     container.style.opacity = 0;
+    setTimeout(() => {container.style.zIndex = -10}, 500);
 }

@@ -13,6 +13,15 @@ class index(TemplateView):
         return render(request, "web/index.html", {})
 
 
+class dash(TemplateView):
+    def get(self, request):
+        return render(request, "web/FrontEnd.html", {})
+
+    def post(self, request):
+        print(request.POST)
+        return render(request, "web/FrontEnd.html", {})
+
+
 def handler404(request, exception, template_name="404.html"):
     response = render_to_response("web/404.html")
     response.status_code = 404

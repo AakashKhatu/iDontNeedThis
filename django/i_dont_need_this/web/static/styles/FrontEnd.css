@@ -16,7 +16,7 @@ main,main:hover{
   justify-content: center;
   align-items: center;
 }
-#food:hover,#bed:hover,#medi:hover,#Furniture:hover,#Electronics:hover,#books:hover,#cloth:hover{
+#food:hover,#bed:hover,#medi:hover,#Furniture:hover,#Electronics:hover,#books:hover,#cloth:hover,#money:hover{
   cursor: pointer;
 }
 img{
@@ -64,6 +64,9 @@ background: linear-gradient(45deg,#cc00cc,#ff66ff,#ffe6ff);
 }
 #bed{
   background: linear-gradient(45deg,#ff1a1a,#ffe6e6);
+}
+#money{
+  background: linear-gradient(45deg,#000000,#8c8c8c,#e6e6e6);
 }
 a{
   color: red;
