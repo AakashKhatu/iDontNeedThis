@@ -16,6 +16,8 @@ const animateOnLogin = e => {
     container.style.zIndex = 2;
 }
 
+const openFaq = () => { location.href = 'faq.html' } 
+
 const openPassword = () => {
     const passwords = document.getElementsByClassName('password');
     console.log(passwords);
