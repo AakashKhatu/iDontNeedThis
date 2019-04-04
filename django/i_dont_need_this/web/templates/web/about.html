@@ -1,0 +1,94 @@
+<html>
+{% load static %}
+
+<head>
+	<title>About us page</title>
+	<style>
+		.rectangle {
+			height: 50px;
+			width: 100%;
+			background-color: #2E52BD;
+			margin: 0;
+		}
+
+		.box {
+			height: 300px;
+			width: 300px;
+			display: flex;
+			margin-left: 200px;
+			margin-top: 50px;
+			margin-right: 100px;
+		}
+
+		.margin {
+			margin-right: 100px;
+		}
+
+		.text {
+			margin-left: 300px;
+			margin-top: 20px;
+			margin-right: 300px;
+			font-size: 30px;
+			font-style: italic;
+		}
+
+		div {
+			margin: 0px;
+		}
+
+		img {
+			border: solid 0px yellow;
+			border-radius: 50%
+		}
+	</style>
+
+</head>
+
+<body>
+	<h2>
+		<center>i Dont Need This</center>
+	</h2>
+	<div class="rectangle">
+		<h1>About us </h1>
+	</div>
+	<div class="box">
+		<div class="margin">
+			<img src="{% static "image/aakash.jpg" %}" height="200px" width="200px">
+			<h3>
+				<center>Aakash Khatu</center>
+			</h3>
+		</div>
+		<div class="margin">
+			<img src="{% static "image/sagar.jpg" %}" height="200px" width="200px">
+			<h3>
+				<center>Sagar Gupta</center>
+			</h3>
+		</div>
+		<div>
+			<img src="{% static "image/ajesh.jpg" %}" height="200px" width="200px">
+			<h3>
+				<center>Ajesh DS</center>
+			</h3>
+		</div>
+	</div>
+	<div class="box">
+		<div class="margin">
+			<img src="{% static "image/yash.jpg" %}" height="200px" width="200px">
+			<h3>
+				<center>Yash Shettigar</center>
+			</h3>
+		</div>
+		<div class="margin">
+			<img src="{% static "image/alpesh.jpg" %}" height="200px" width="200px">
+			<h3>
+				<center>Alpesh Yadav</center>
+			</h3>
+		</div>
+	</div>
+	<p class="text">We,the team Laughing Crying Emoji,from Terna Engineering College had made a digital platform where
+		two types of people are going to interact.One who have extra resources and others who are in need of that
+		resources.Resources can be anything like leftover food,used clothes,e-waste.These resources should be used by
+		needy people.Keeping in mind these features,we have devoloped a user-freindly,optimised website so that it is
+		easy to access and can load faster.Hope our hard work will lead to a fruitful result!!
+	</p>
+</body>

@@ -13,6 +13,14 @@ def logout_view(request):
     return redirect('index')
 
 
+def about_view(request):
+    return render(request, 'web/about.html', {})
+
+
+def faq_view(request):
+    return render(request, 'web/faq.html', {})
+
+
 class index(TemplateView):
     def get(self, request):
         if request.user.is_authenticated:
@@ -44,7 +52,7 @@ class dash(TemplateView):
         return render(request, "web/FrontEnd.html", {})
 
     def post(self, request):
-        otp = send_otp()
+        otp = send_otp(request.POST.get('phone'))
         try:
             user = User.objects.get(username=request.POST.get('phone'))
             print("user exists", user)
