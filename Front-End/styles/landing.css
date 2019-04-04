@@ -63,10 +63,13 @@ h1, p {
     margin: 0 30px;     
 }
 
+.info p {
+    font-size: 1.4rem;
+}
+
 .info .image {
-    background: red;
-    height: 200px;
-    width: 50%;
+    width: 30%;
+    margin: 0 50px;
 }
 
 
