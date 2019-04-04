@@ -10,11 +10,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" type="text/css" media="screen" href="styles/landing.css">
     <link rel="stylesheet" type="text/css" media="screen" href="styles/login.css">
-    <script src="js/landing.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
+    <script src="js/landing.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </head>
 <body>
     <section class="nav container">
@@ -28,11 +28,11 @@
     </section>
     <section class="hero container">
         <div class="content">
-            <p class="title">Have stuff lying around that you don't need?</p>
-            <p class="subtitle">We can help!</p>
-            <a href="#" onclick="animateOnLogin('.auth-popup-container')" class="button">Get Started</a>
+            <p class="title" data-aos="fade-right">Have stuff lying around that you don't need?</p>
+            <p class="subtitle" data-aos="fade-right" data-aos-delay="200">We can help!</p>
+            <a href="#" onclick="animateOnLogin('.auth-popup-container')"  data-aos="fade-right" data-aos-delay="400" class="button">Get Started</a>
         </div>
-        <img src="icons/hero-1.svg" />
+        <img src="icons/hero-1.svg" data-aos="fade-left" data-aos-delay="150" />
     </section>
     <section class="auth-popup-container">
         <div class="auth-backdrop" onclick="animateClose('.auth-popup-container')"></div>
@@ -66,10 +66,11 @@
     </section>
     <section class="info-container">
         <div class="info">
-            <div>
+            <div data-aos="fade-right">
                 <h1>Lorem ipsum dolor sit amet.</h1>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores assumenda, nam ratione maxime saepe, ipsa quis provident reprehenderit incidunt quam laborum, dolores dolore neque magni possimus facilis quibusdam. Mollitia accusamus suscipit nesciunt natus vero impedit rem laudantium nulla delectus repellat?</p>        
             </div>
+            <div data-aos="fade-left" class="image" />
         </div>
     </section>
 </body>
