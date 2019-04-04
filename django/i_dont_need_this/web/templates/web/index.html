@@ -24,17 +24,20 @@
         <h1>I don't need this</h1>
         <div class="links">
             <p>About Us</p>
+            {{ phnum }}
+            {% if phnum is not None %}
+            <a href="{% url "profile" %}">Logged In as: {{ phnum }}</a>
+            {% else %}
             <p onclick="animateOnLogin('.auth-popup-container')">Login</p>
             <p onclick="animateOnLogin('.auth-popup-container')">Sign Up</p>
-
+            {% endif %}
         </div>
     </section>
     <section class="hero container">
         <div class="content">
             <p class="title" data-aos="fade-right">Have stuff lying around that you don't need?</p>
             <p class="subtitle" data-aos="fade-right" data-aos-delay="200">We can help!</p>
-            <a href="{% url "dashboard" %}" onclick="animateOnLogin('.auth-popup-container')" data-aos="fade-right"
-                data-aos-delay="400" class="button">Get Started</a>
+            <a href="{% url "dashboard" %}" data-aos="fade-right" data-aos-delay="400" class="button">Get Started</a>
         </div>
         <img src="{% static "icons/hero-1.svg" %}" data-aos="fade-left" data-aos-delay="150" />
     </section>
@@ -59,9 +62,9 @@
                     <label for="phone">Phone</label>
                 </div>
                 <div class="input-field password">
-                    <input required class="password" name="password" oninput="this.setCustomValidity('')" minlength="6"
-                        oninvalid="this.setCustomValidity('Password should be 6 characters long.')" type="password">
-                    <label class="password" for="password">Password</label>
+                    <input required class="password" name="password" oninput="this.setCustomValidity('')" minlength="5"
+                        oninvalid="this.setCustomValidity('OTP should be 5 characters long.')" type="password">
+                    <label class="password" for="password">OTP</label>
                 </div>
                 <button type="submit" id="logsubmit" onclick="clickedNext(this)"
                     class="button accent fullwidth">Generate OTP</button>

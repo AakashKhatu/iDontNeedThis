@@ -1,16 +1,28 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views.generic import TemplateView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth import login
 from django.contrib.auth.models import User
-# Create your views here.
+from .otp import send_otp
+
+from django.contrib.auth import logout
+
+
+def logout_view(request):
+    logout(request)
+    return redirect('index')
 
 
 class index(TemplateView):
     def get(self, request):
+        if request.user.is_authenticated:
+            c = {"phnum": request.user.username}
+        else:
+            c = {"phnum": None}
         return render(request, "web/index.html", {})
 
     def post(self, request):
+        otp = send_otp(request.POST.get('phone'))
         try:
             user = User.objects.get(username=request.POST.get('phone'))
             print("user exists", user)
@@ -19,6 +31,10 @@ class index(TemplateView):
                 request.POST.get('phone'), 'test@test.com', 'password')
             user.save()
             print("created user", user)
+        if otp == request.POST.get('password'):
+            print("validated")
+        else:
+            print("LOL")
         user = login(request, user)
         return render(request, "web/index.html", {})
 
@@ -28,6 +44,7 @@ class dash(TemplateView):
         return render(request, "web/FrontEnd.html", {})
 
     def post(self, request):
+        otp = send_otp()
         try:
             user = User.objects.get(username=request.POST.get('phone'))
             print("user exists", user)
@@ -36,6 +53,10 @@ class dash(TemplateView):
                 request.POST.get('phone'), 'test@test.com', 'password')
             user.save()
             print("created user", user)
+        if otp == request.POST.get('password'):
+            print("validated")
+        else:
+            print("LOL")
         user = login(request, user)
         return render(request, "web/FrontEnd.html", {})
 
