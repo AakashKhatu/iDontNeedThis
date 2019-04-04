@@ -176,8 +176,8 @@ const openPopUp = id => {
         return;
     const h1 = document.querySelector('body > section.popup-container > div.popup > h1');
     const form = document.querySelector('body > section.popup-container > div.popup > form');
-    while(form.firstChild) {
-        form.removeChild(form.firstChild);
+    while(form.children[1]) {
+        form.removeChild(form.children[1]);
     }
     h1.innerText = props.name;
     h1.style.backgroundColor = props.color;
