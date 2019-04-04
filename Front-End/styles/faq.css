@@ -2,3 +2,12 @@ html{
   background-color: white;
   display:flex;
 }
+#Quest{
+  display: flex;
+  flex-direction: row;
+  margin: 20px 40px 20px 40px;
+  justify-content: center;
+  align-items: center;
+  border: solid 1px red;
+  
+}
