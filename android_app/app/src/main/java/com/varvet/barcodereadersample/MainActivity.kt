@@ -9,6 +9,10 @@ import android.widget.TextView
 import com.google.android.gms.common.api.CommonStatusCodes
 import com.google.android.gms.vision.barcode.Barcode
 import com.varvet.barcodereadersample.barcode.BarcodeCaptureActivity
+import org.jetbrains.anko.doAsync
+import org.jetbrains.anko.toast
+import org.jetbrains.anko.uiThread
+import java.net.URL
 
 class MainActivity : AppCompatActivity() {
 
@@ -33,6 +37,12 @@ class MainActivity : AppCompatActivity() {
                     val barcode = data.getParcelableExtra<Barcode>(BarcodeCaptureActivity.BarcodeObject)
                     val p = barcode.cornerPoints
                     mResultTextView.text = barcode.displayValue
+                    doAsync{
+                        val result = URL("https://httpbin.org/get").readText()
+                        uiThread {
+                            toast(result)
+                        }
+                    }
                 } else
                     mResultTextView.setText(R.string.no_barcode_captured)
             } else
