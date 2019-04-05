@@ -13,4 +13,5 @@ def scanned(request):
     url = "http://"+rpi_ip+"/?open="+box_state
     response = requests.request("GET", url)
     return HttpResponse(
-        "You scanned a qr code and you should'nt be seeing this page")
+        "Box is currently {0}".format(
+            "opened" if box_state == "True" else "Closed"))
