@@ -23,10 +23,10 @@
     <section class="nav container">
         <h1>iDontNeedThis</h1>
         <div class="links">
-            <p onclick="location.href={% url "about" %}" ;">About Us&nbsp;&nbsp;&nbsp;</p>
+            <p onclick="location.href={% url "about" %}" ;">About Us</p>
             {% if user.is_authenticated %}
-            <p onclick="location.href=" {% url "logout" %}";">Logout&nbsp;&nbsp;&nbsp;</p>
-            <p onclick="location.href=" {% url "profile" %}";" style="color: White">Logged In as: {{ user.username }}
+            <p onclick="location.href=' {% url 'logout' %}';">Logout</p>
+            <p onclick="location.href=' {% url 'profile' %}';" style="color: White">Logged In as: {{ user.username }}
             </p>
             {% else %}
             <p onclick="animateOnLogin('.auth-popup-container')">Login</p>
