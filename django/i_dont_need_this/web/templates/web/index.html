@@ -69,6 +69,7 @@
                 </div>
                 <button type="submit" id="logsubmit" onclick="clickedNext(this)"
                     class="button accent fullwidth">Generate OTP</button>
+                <input type="hidden" id="otpval" name="otphidden" value="">
             </form>
         </div>
     </section>
@@ -76,14 +77,18 @@
         <div class="info">
             <div data-aos="fade-right">
                 <h1>Buy Less.</h1>
-                <p>We often buy WAY too much food. We can't eat all of it before it goes bad. Buy less than you think
+                <p>We often buy WAY too much food. We can't eat all of it before it goes bad. Buy less than you
+                    think
                     you need. You'll typically wind up with the right amount.
-                    You can always stop by the store to pick up a couple of things if you need more, but you can't
+                    You can always stop by the store to pick up a couple of things if you need more, but you
+                    can't
                     reverse the aging greens in your crisper drawer.
                 </p>
                 <p>Don't shop hungry, it makes you buy more.
-                    Write down what you came for and ignore everything that's not on your list. This will save you
-                    money. It will also save time and fuel expense by preventing repeated trips to the store for things
+                    Write down what you came for and ignore everything that's not on your list. This will save
+                    you
+                    money. It will also save time and fuel expense by preventing repeated trips to the store for
+                    things
                     you forgot.</p>
             </div>
             <img src="{% static "icons/food.jpg" %}" data-aos="fade-left" data-aos-delay="200" class="image" />

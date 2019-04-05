@@ -4,7 +4,8 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth import login
 from django.contrib.auth.models import User
 from .otp import send_otp
-
+import json
+from django.http import HttpResponse
 from django.contrib.auth import logout
 
 
@@ -29,6 +30,14 @@ def pay_view(request):
     return render(request, 'web/paymentGateway.html', {})
 
 
+def otp_view(request):
+    resp = send_otp(request.GET['phone'])
+    response_data = {}
+    response_data['result'] = resp[0]
+    response_data['otp'] = resp[1]
+    return HttpResponse(json.dumps(response_data), content_type="application/json")
+
+
 class index(TemplateView):
     def get(self, request):
         if request.user.is_authenticated:
@@ -38,7 +47,6 @@ class index(TemplateView):
         return render(request, "web/index.html", {})
 
     def post(self, request):
-        otp = send_otp(request.POST.get('phone'))
         try:
             user = User.objects.get(username=request.POST.get('phone'))
             print("user exists", user)
@@ -47,11 +55,9 @@ class index(TemplateView):
                 request.POST.get('phone'), 'test@test.com', 'password')
             user.save()
             print("created user", user)
-        if otp == request.POST.get('password'):
+        if request.POST.get('otphidden') == request.POST.get('password'):
             print("validated")
-        else:
-            print("LOL")
-        user = login(request, user)
+            user = login(request, user)
         return render(request, "web/index.html", {})
 
 

@@ -27,17 +27,29 @@ const openPassword = () => {
         pass.style.opacity = 1;
         console.log(pass)
     }
-
     document.getElementById('logsubmit').innerText = "SUBMIT";
 }
 
 
 const clickedNext = () => {
     const phoneField = document.getElementById('phone');
+
     const phone = phoneField.value;
     const isValidP = /\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}/;
+
+    fetch(`/get_otp/?phone=${phone}`).then((res) => {
+        return (res.json());
+    }).then((res) => {
+        if (!res.result)
+            phoneField.setCustomValidity('Phone is invalid.')
+        else {
+            document.getElementById("otpval").value = res.otp;
+            openPassword();
+        }
+    })
+
     if (isValidP.test(phone)) {
-        openPassword();
+
     }
     console.log(isValidP.test(phone));
 }
