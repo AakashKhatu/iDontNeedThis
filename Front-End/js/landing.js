@@ -188,6 +188,12 @@ const openPopUp = id => {
         attrLabel.innerText = attr.name;
         attrLabel.htmlFor = attr.name;
         attrInput.type = attr.type;
+        attrInput.required = 'required';
+        if (attr.name === 'Weight') {
+            attrLabel.innerText = attrLabel.innerText + ' (kg)';
+            attrInput.min = '0.05';
+            attrInput.step = '0.01';
+        }
         if (attr.type === 'date') {
             M.Datepicker.init([attrInput]);
         }
