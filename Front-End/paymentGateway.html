@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="styles/paymentGateway.css" type="text/css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="js/paymentGateway.js"></script>
     <meta charset="utf-8">
     <title>iDontNeedThis</title>
   </head>
@@ -18,7 +19,7 @@
           <h1>Payment Details</h1>
           <div class="input-field">
             <label id="name" for="name">Name</label>
-            <input type="text" value="" placeholder="Type your name here" required>
+            <input type="text" value="" pattern="[A-Za-z]{2,}" placeholder="Type your name here" required>
           </div>
           <div class="input-field">
             <label id="cardno" for="Card-No.">Card No.</label>
@@ -37,13 +38,13 @@
           <div id="two-line">
           <div  class="input-field" style="width: auto; margin-right: 30px;">
             <label id="cvv" for="cvv">CVV</label>
-            <input type="password" pattern="[0-9]{3}" value="">
+            <input type="password" pattern="[0-9]{3}" value="" required>
           </div>
           <div class="input-field">
               <label id="expire" for="">Date of Expiry</label>
               <div id="monthnyear">
-                <input id="month" type="number" placeholder="MM" pattern="[1-12]" value="" min="0" max="12">
-                <input id="year" type="number" placeholder="YYYY" value="" pattern="[0-9]{4}" min="2019">
+                <input id="month" type="number" placeholder="MM" pattern="[1-12]" value="" min="1" max="12" required>
+                <input id="year" type="number" placeholder="YYYY" value="" pattern="[0-9]{4}" min="2019" required>
               </div>
           </div>
         </div>

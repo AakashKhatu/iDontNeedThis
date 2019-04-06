@@ -21,7 +21,7 @@ html{
 }
 #bar{
   display: flex;
-  flex-direction: row;  
+  flex-direction: row;
   background: #ff6b6b;
   align-items: center;
   justify-content: flex-start;
@@ -89,12 +89,23 @@ input[type=submit]{
 }
 
 input {
-  border: 1px solid #ff6b6b;  
+  border: 1px solid #ff6b6b;
   height: 50px;
   padding: 0 20px;
   width: 100%;
 }
-
+select{
+  font-size: 15px;
+  color: #b3b3b3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 51%;
+  border: solid 1px #ff6b6b;
+  padding: 10px 0 10px 0;
+  justify-content: center;
+}
 ::-webkit-input-placeholder{
   font-size: 15px;
   color: #b3b3b3;
